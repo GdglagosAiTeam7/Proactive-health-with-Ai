@@ -1,0 +1,14 @@
+{
+  "name": "proactive-health-with-ai",
+  "version": "1.0.0",
+  "description": "Proactive health with AI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AI"
+  ],
+  "author": "Gdglagos Team7",
+  "license": "ISC"
+}
