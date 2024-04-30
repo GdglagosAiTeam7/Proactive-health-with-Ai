@@ -34,7 +34,7 @@ const Login = () => {
 
   return (
     <main className="w-full pt-7 md:pt-14 pb-5">
-      <div className="w-[85%] md:w-[60%] mx-auto mt-1 mb-2 flex gap-1 text-[10px] md:text-sm font-normal font-montserrat text-dark">
+      <div className="w-[85%] md:w-[60%] mx-auto mt-8 md:mt-1 mb-2 flex gap-1 text-xs md:text-sm font-normal font-montserrat text-dark">
         <p>Already have an account?</p>
         <Link
           href="/login"
@@ -47,7 +47,7 @@ const Login = () => {
       <div className="w-[85%] md:w-full mx-auto md:mx-0 md:flex md:flex-col md:items-center md:justify-center">
         <div className="md:w-[60%] md:h-[450px] block md:flex rounded-md ">
           <div className="md:basis-[50%] rounded-sm shadow-md order-2">
-            <div className="w-full h-[200px] md:h-full relative">
+            <div className="w-full h-[250px] md:h-full relative">
               <div>
                 <Image
                   src={img3}
@@ -59,14 +59,14 @@ const Login = () => {
               </div>
             </div>
           </div>
-
-          <div className="w-full md:basis-[50%] mt-8 md:mt-0 pb-10 md:pb-0 flex flex-col justify-center items-center bg-[#edeffc] rounded-md shadow-md order-1">
+          {/* bg-[#edeffc] */}
+          <div className="w-full md:basis-[50%] pt-7 pb-10 md:pb-0 flex flex-col justify-center items-center md:bg-[#f8f8ff] bg-[#ddddf3] rounded-md shadow-md order-1">
             <form className="w-[85%] md:w-[70%] flex flex-col items-center justify-center">
               <div className="md:mb-8 text-center">
-                <h1 className="text-base md:text-lg text-[#101532] font-medium">
+                <h1 className="text-base font-bold md:text-lg text-[#101532] md:font-medium">
                   Sign Up
                 </h1>
-                <p className="mt-1 text-[10px] md:text-sm text-gray-500 font-normal tracking-wide">
+                <p className="mt-1 text-xs md:text-sm text-gray-500 font-normal tracking-wide">
                   ..to enjoy our premium services
                 </p>
               </div>
@@ -102,8 +102,8 @@ const Login = () => {
                   onBlur={formik.handleBlur}
                   className={
                     formik.errors.password && formik.touched.password
-                      ? "block w-full h-[2.2rem] md:h-[2.7rem] mt-1 py-1 md:py-1.5 px-4 text-[12px] text-[#101532] border-0 outline-none ring-1 ring-inset ring-[#ff7272] placeholder:text-gray-400 placeholder:text[11px] focus:ring-1 focus:ring-inset focus:ring-[#ff7272] tracking-wide rounded-full shadow-sm"
-                      : "block w-full h-[2.2rem] md:h-[2.7rem] mt-1 py-1 md:py-1.5 px-4 text-[12px] text-[#101532] border-0 outline-none ring-1 ring-inset ring-[#d4d4d4] placeholder:text-gray-400 placeholder:text[11px] focus:ring-1 focus:ring-inset focus:ring-[#999999] tracking-wide rounded-full shadow-sm"
+                      ? "block w-full h-[2.4rem] md:h-[2.7rem] mt-1 py-1 md:py-1.5 px-4 text-[12px] text-[#101532] border-0 outline-none ring-1 ring-inset ring-[#ff7272] placeholder:text-gray-400 placeholder:text[11px] focus:ring-1 focus:ring-inset focus:ring-[#ff7272] tracking-wide rounded-full shadow-sm"
+                      : "block w-full h-[2.4rem] md:h-[2.7rem] mt-1 py-1 md:py-1.5 px-4 text-[12px] text-[#101532] border-0 outline-none ring-1 ring-inset ring-[#d4d4d4] placeholder:text-gray-400 placeholder:text[11px] focus:ring-1 focus:ring-inset focus:ring-[#999999] tracking-wide rounded-full shadow-sm"
                   }
                 />
                 {formik.touched.password && formik.errors.password ? (
@@ -124,8 +124,8 @@ const Login = () => {
                   className={
                     formik.errors.confirmPassword &&
                     formik.touched.confirmPassword
-                      ? "block w-full h-[2.2rem] md:h-[2.7rem] mt-1 py-1 md:py-1.5 px-4 text-[12px] text-[#101532] border-0 outline-none ring-1 ring-inset ring-[#ff7272] placeholder:text-gray-400 placeholder:text[11px] focus:ring-1 focus:ring-inset focus:ring-[#ff7272] tracking-wide rounded-full shadow-sm"
-                      : "block w-full h-[2.2rem] md:h-[2.7rem] mt-1 py-1 md:py-1.5 px-4 text-[12px] text-[#101532] border-0 outline-none ring-1 ring-inset ring-[#d4d4d4] placeholder:text-gray-400 placeholder:text[11px] focus:ring-1 focus:ring-inset focus:ring-[#999999] tracking-wide rounded-full shadow-sm"
+                      ? "block w-full h-[2.4rem] md:h-[2.7rem] mt-1 py-1 md:py-1.5 px-4 text-[12px] text-[#101532] border-0 outline-none ring-1 ring-inset ring-[#ff7272] placeholder:text-gray-400 placeholder:text[11px] focus:ring-1 focus:ring-inset focus:ring-[#ff7272] tracking-wide rounded-full shadow-sm"
+                      : "block w-full h-[2.4rem] md:h-[2.7rem] mt-1 py-1 md:py-1.5 px-4 text-[12px] text-[#101532] border-0 outline-none ring-1 ring-inset ring-[#d4d4d4] placeholder:text-gray-400 placeholder:text[11px] focus:ring-1 focus:ring-inset focus:ring-[#999999] tracking-wide rounded-full shadow-sm"
                   }
                 />
                 {formik.touched.confirmPassword &&
@@ -138,7 +138,7 @@ const Login = () => {
 
               <button
                 type="submit"
-                className="block w-full h-[2.2rem] md:h-[2.7rem] mt-10 py-1 md:py-1.5 bg-[#1F2B6C] text-white px-4 text-[10px] md:text-xs font-normal border-[#1F2B6C] rounded-full shadow-sm tracking-wide hover:bg-[#171d3f] cursor-pointer transition-all ease-linear duration-300"
+                className="block w-full h-[2.4rem] md:h-[2.7rem] mt-10 py-1 md:py-1.5 bg-[#1F2B6C] text-white px-4 text-xs md:text-xs font-normal border-[#1F2B6C] rounded-full shadow-sm tracking-wide hover:bg-[#171d3f] cursor-pointer transition-all ease-linear duration-300"
               >
                 Sign up
               </button>

@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
-const roboto = Roboto_Mono({ subsets: ["latin"] });
+// const roboto = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Welcome to Proactive Health With AI",
@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={inter.className}>
         <Navbar />
         {children}
       </body>
