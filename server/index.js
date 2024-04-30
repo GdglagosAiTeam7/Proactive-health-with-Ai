@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const connectDB = require('./dbconnect')
 const cookieParser = require('cookie-parser')
+require('dotenv').config();
 
 const app = express()
 
@@ -11,7 +12,7 @@ app.use(cors());
 
 connectDB
 
-const PORT = 5000
+const PORT = process.env.PORT || 5000
 
 app.use(express.json());
 app.use(bodyParser.json());
