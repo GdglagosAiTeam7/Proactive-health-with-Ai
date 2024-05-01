@@ -4,6 +4,7 @@ module.exports = {
         {
           source: '/:path*',
           destination: '/',
+          permanent: true,
         },
       ];
       
