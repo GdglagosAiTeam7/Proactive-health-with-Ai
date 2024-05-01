@@ -8,6 +8,10 @@ require('dotenv').config();
 
 const app = express()
 
+app.use(cors({
+  origin: 'https://proactive-health-ai-ui4g.onrender.com'
+}));
+
 app.use(cors());
 
 connectDB
