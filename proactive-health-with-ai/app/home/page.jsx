@@ -27,7 +27,7 @@ const handleClick = async (e) => {
   console.log(file)
   try {
     const newPost = await axios.post(
-      "http://localhost:5000/api/upload-image",
+      "https://proactive-health-ai.onrender.com/api/upload-image",
       {
         question,
         mimeType: file.type,

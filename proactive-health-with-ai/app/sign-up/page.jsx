@@ -41,7 +41,7 @@ const Login = () => {
     onSubmit: async (values) => {
       console.log(values);
       try {
-        const response = await axios.post('http://localhost:5000/api/signup', {
+        const response = await axios.post('https://proactive-health-ai.onrender.com/api/signup', {
           email: values.email,
           password: values.password
         },{
