@@ -112,7 +112,7 @@ const Home = () => {
         </button>
       </div>
 
-      <div className="w-[90%] md:w-[60%] mx-auto py-10 mt-5 mb-10 md:p-20 shadow-md bg-[#f9fafc] ">
+      <div className="w-[90%] md:w-[60%] mx-auto py-10 mt-5 mb-10 md:p-20 shadow-md bg-[#f9fafc] rounded-b-3xl">
         <h1 className="p-3 mb-5 text-2xl font-medium text-[#1F2B6C] text-center">
           Your AI Assistant's Health Result
         </h1>
@@ -129,13 +129,24 @@ const Home = () => {
           maiores eligendi!
         </p>
       </div>
-      <div className="w-full flex justify-center pb-10">
+      <div className="w-full flex flex-col md:flex-row justify-center items-center gap-5 pb-10">
         <div>
           <Link
             href="/hospital"
             className="w-fit mt-8 px-6 py-4 flex items-center gap-2 text-sm md:text-base border border-[#1F2B6C] text-[#1F2B6C] hover:bg-[#dde0f2] hover:border-[#a5aac5] font-medium md:font-semibold tracking-wide rounded-full shadow-lg transition-all ease-linear duration-200"
           >
             <span>Need a Specialist?</span>
+            <span>
+              <FaArrowRight />
+            </span>
+          </Link>
+        </div>
+        <div>
+          <Link
+            href="/pharmacy"
+            className="w-fit md:mt-8 px-6 py-4 flex items-center gap-2 text-sm md:text-base border border-[#1F2B6C] text-[#1F2B6C] hover:bg-[#dde0f2] hover:border-[#a5aac5] font-medium md:font-semibold tracking-wide rounded-full shadow-lg transition-all ease-linear duration-200"
+          >
+            <span>Visit a Pharmacy</span>
             <span>
               <FaArrowRight />
             </span>

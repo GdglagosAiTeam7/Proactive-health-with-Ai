@@ -7,11 +7,11 @@ import logo from "@/public/phai-logo.png";
 
 const Navbar = () => {
   const pathname = usePathname();
-
+  // md:bg-[#f8f8ff]
   return (
-    <div className="w-full py-4 md:py-8 bg-[#ddddf3] md:bg-[#f8f8ff] shadow-sm md:shadow-sm relative">
+    <div className="w-full py-4 md:py-8 bg-[#ddddf3] md:bg-[#eeeefb] shadow-sm md:shadow-md relative">
       <div className="w-full grid place-items-center md:w-[90%] md:mx-auto p-3 md:flex md:items-center md:justify-between">
-        <div className="md:basis-[80%] flex items-center gap-4 justify-center md:justify-start md:gap-14 bg-">
+        <div className="md:basis-[50%] flex items-center gap-4 justify-center md:justify-start md:gap-14">
           <div>
             <Image src={logo} alt="laptop bg" width={100} height={50} />
           </div>
