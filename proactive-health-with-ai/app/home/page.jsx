@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 // import inputFile from "../../../${file.name}"
 import noPhoto from "@/public/no-photo.png";
-import botImg1 from "@/public/botImg1.png";
+import botImg1 from "./botImg1.png";
+// import botImg1 from "@/public/botImg1.png";
 import botImg2 from "@/public/ai-doctor-b1.png";
 import { FaArrowDown } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
