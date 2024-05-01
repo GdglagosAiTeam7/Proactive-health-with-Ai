@@ -7,9 +7,9 @@ const mongoose = require('mongoose')
 
 async function getData (req, res){
 try {
-    const {text, path, mimeType} = req.body
+    const {question, path, mimeType} = req.body
 
-    const genAI = new GoogleGenerativeAI(`${process.env.API_KEY}`);
+    const genAI = new GoogleGenerativeAI(`AIzaSyDoVgqXh1hhSGhuqCh2Sg1A2CV4k6LVjIQ`);
 
     function fileToGenerativePart(path, mimeType) {
         return {
@@ -22,7 +22,7 @@ try {
 
     const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
 
-    const prompt = text
+    const prompt = question
   
     
 

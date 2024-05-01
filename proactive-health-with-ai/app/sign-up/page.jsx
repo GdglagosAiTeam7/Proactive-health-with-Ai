@@ -6,29 +6,59 @@ import Image from "next/image";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import img3 from "@/public/robot3.jpg";
+import axios from 'axios'
+// import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
+
 
 const Login = () => {
+
+  //  const [email, setEmail] = useState('')
+  //  const [password, setPassword] = useState('')
+  //  const [] = useState('')
+
+  const router = useRouter();
+
+
   const validationSchema = Yup.object().shape({
     email: Yup.string()
       .email()
       .trim()
       .required("Please enter your email address*"),
-    password: Yup.string().trim().required("Please enter password"),
-    confirmPassword: Yup.string().trim().required("Please confirm password"),
+    password: Yup.string().trim().required("Please enter password")
+    // confirmPassword: Yup.string().trim().required("Please confirm password"),
   });
 
   const formik = useFormik({
     initialValues: {
       email: "",
-      password: "",
-      confirmPassword: "",
+      password: ""
+      // confirmPassword: "",
     },
 
     validationSchema,
 
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.log(values);
-      //  handleSubmit(values);
+      try {
+        const response = await axios.post('http://localhost:5000/api/signup', {
+          email: values.email,
+          password: values.password
+        },{
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        }
+          
+        )
+
+        const data = await response.json()
+        if(data){
+          router.push('/hospital')
+        }
+      } catch (error) { 
+        console.error('Error signing up on the frontend', error);
+      }
     },
   });
 
@@ -61,7 +91,7 @@ const Login = () => {
           </div>
           {/* bg-[#edeffc] */}
           <div className="w-full md:basis-[50%] pt-7 pb-10 md:pb-0 flex flex-col justify-center items-center md:bg-[#f8f8ff] bg-[#ddddf3] rounded-md shadow-md order-1">
-            <form className="w-[85%] md:w-[70%] flex flex-col items-center justify-center">
+            <form onSubmit={formik.handleSubmit} className="w-[85%] md:w-[70%] flex flex-col items-center justify-center">
               <div className="md:mb-8 text-center">
                 <h1 className="text-base font-bold md:text-lg text-[#101532] md:font-medium">
                   Sign Up
@@ -113,7 +143,7 @@ const Login = () => {
                 ) : null}
               </div>
 
-              <div className="w-full mt-6 relative">
+              {/* <div className="w-full mt-6 relative">
                 <input
                   type="text"
                   placeholder="Confirm Password"
@@ -134,7 +164,7 @@ const Login = () => {
                     {formik.errors.confirmPassword}
                   </p>
                 ) : null}
-              </div>
+              </div> */}
 
               <button
                 type="submit"
