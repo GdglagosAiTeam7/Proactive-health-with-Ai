@@ -132,7 +132,7 @@ const handleClick = async (e) => {
         <div className="w-[90%] mx-auto mt-5 mb-5 md:my-10  py-10 px-5 md:py-14 grid place-items-center bg-[#f9fafc] md:bg-white">
            {response && <Image 
             // src={`"../../../${file.name}"`}
-            src={`/${file.name}`}
+            src={`public/${file.name}`}
             alt="input image"
             width={400}
             height={200}
