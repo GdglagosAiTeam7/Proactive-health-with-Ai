@@ -31,7 +31,7 @@ const handleClick = async (e) => {
       {
         question,
         mimeType: file.type,
-        path: `proactive-health-with-ai/out/${file.name}`,
+        path: `https://proactive-health-ai.onrender.com/${file.name}`,
         headers: {
           "Content-Type": "application/json",
         },
