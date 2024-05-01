@@ -3,7 +3,7 @@ module.exports = {
       return [
         // Basic redirect: /about to /
         {
-          source: '/',
+          source: '/_not-found',
           destination: '/home',
           permanent: true, // 301 (Permanent) or 307 (Temporary)
         },
@@ -12,6 +12,11 @@ module.exports = {
           source: '/about',
           destination: '/about',
           permanent: true,
+        },
+        {
+          source: '/',
+          destination: '/home',
+          permanent: true, // 301 (Permanent) or 307 (Temporary)
         },
       ];
     },

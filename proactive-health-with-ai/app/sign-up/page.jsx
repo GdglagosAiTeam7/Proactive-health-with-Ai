@@ -53,7 +53,7 @@ const Login = () => {
         )
 
         const data = await response.json()
-        if(data){
+        if(response.status === 200){
           router.push('/hospital')
         }
       } catch (error) { 
